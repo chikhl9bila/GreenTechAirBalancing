@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Selection</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f9fa;
+    }
+    .wrapper {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .input-box {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    .input-box input {
+      width: 100%;
+      padding: 0.75rem 2.5rem 0.75rem 1rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+    }
+    .input-box i {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6c757d;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <form action="./loginpost" method="POST">
+      <h1 class="text-center">Login</h1>
+      <div class="input-box">
+        <input type="text" class="form-control" placeholder="Username" name="username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Login</button>
+    </form>
+  </div>
+</body>
+</html>
