@@ -80,18 +80,19 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    
+
                     <a href="#home" class="nav-item nav-link active">Home</a>
                     <a href="#service" class="nav-item nav-link">Service</a>
                     <a href="#projects" class="nav-item nav-link">Projects</a>
                     <a href="#aboutus" class="nav-item nav-link">About Us</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
-                    <a href="#contact" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A Quote
+                    <a href="#contact" class="nav-item nav-link bg-primary text-white px-5 ms-3 d-none d-lg-block">Get A
+                        Quote
                         <i class="bi bi-arrow-right"></i></a>
-                        
+
                 </div>
             </div>
         </nav>
@@ -231,7 +232,7 @@
                         <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Fan sheave data</p>
                     </div>
                 </div>
-                
+
 
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
@@ -242,15 +243,19 @@
                     <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Volts / Phase</p>
                     <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Motor RPM</p>
                     <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Horsepower </p>
-                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Motor make / brand with pictures</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Motor make / brand with
+                        pictures</p>
                     <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Operating dead head</p>
-                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Amperage – Designed / Measured</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Amperage – Designed / Measured
+                    </p>
                     <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Chiller pressure drops</p>
-                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Operating differential pressure – Designed / Measured</p>
-                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Water Flow – Designed / Measured</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Operating differential pressure
+                        – Designed / Measured</p>
+                    <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Water Flow – Designed /
+                        Measured</p>
                 </div>
 
-                
+
 
             </div>
         </div>
@@ -441,16 +446,20 @@
                     <form id="contactForm">
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control border-0" id="name" placeholder="Your Name" style="height: 55px;">
+                                <input type="text" class="form-control border-0" id="name" placeholder="Your Name"
+                                    style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control border-0" id="email" placeholder="Your Email" style="height: 55px;">
+                                <input type="email" class="form-control border-0" id="email" placeholder="Your Email"
+                                    style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <input type="text" class="form-control border-0" id="subject" placeholder="Subject" style="height: 55px;">
+                                <input type="text" class="form-control border-0" id="subject" placeholder="Subject"
+                                    style="height: 55px;">
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control border-0" id="message" rows="4" placeholder="Message"></textarea>
+                                <textarea class="form-control border-0" id="message" rows="4"
+                                    placeholder="Message"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
@@ -459,23 +468,23 @@
                     </form>
                 </div>
             </div>
-        
+
             <script>
-                document.getElementById('contactForm').addEventListener('submit', function(event) {
+                document.getElementById('contactForm').addEventListener('submit', function (event) {
                     event.preventDefault();
-        
+
                     const name = document.getElementById('name').value;
                     const email = document.getElementById('email').value;
                     const subject = document.getElementById('subject').value;
                     const message = document.getElementById('message').value;
-        
+
                     const data = {
                         name: name,
                         email: email,
                         subject: subject,
                         message: message
                     };
-        
+
                     fetch('/submit', {
                         method: 'POST',
                         headers: {
@@ -483,13 +492,13 @@
                         },
                         body: JSON.stringify(data)
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log('Success:', data);
-                    })
-                    .catch((error) => {
-                        console.error('Error:', error);
-                    });
+                        .then(response => response.json())
+                        .then(data => {
+                            alert('Message successfully sent!');
+                        })
+                        .catch((error) => {
+                            alert('An error occurred while sending the message.');
+                        });
                 });
             </script>
         </div>
@@ -498,7 +507,7 @@
 
 
 
-    <!-- Portfolio Start --> 
+    <!-- Portfolio Start -->
     <div class="container-fluid bg-light py-6 px-5" id="projects">
         <div class="text-center mx-auto mb-5" style="max-width: 600px;">
             <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream
@@ -596,7 +605,8 @@
                     <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
                     <a class="portfolio-title shadow-sm" href="">
                         <p class="h4 text-uppercase">Ottawa Macdonald Cartier International Airport</p>
-                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>1000 Airport Parkway Private, Suite 2500, Ottawa, Ontario, K1V 9B4, Canada</span>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>1000 Airport
+                            Parkway Private, Suite 2500, Ottawa, Ontario, K1V 9B4, Canada</span>
                     </a>
                     <a class="portfolio-btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">
                         <i class="bi bi-plus text-white"></i>
@@ -624,15 +634,22 @@
         <div class="row g-5">
             <div class="col-lg-7">
                 <h1 class="display-5 text-uppercase mb-4"><span class="text-primary">about us</span></h1>
-                <p>At Green Tech Air Balancing, we specialize in optimizing air quality, rigorously adhering to the highest industry standards such as ASHRAE, AABC, NEBB, and SMACNA. Our mission is to exceed expectations, ensuring that your air systems not only meet the strictest standards but surpass them.
+                <p>At Green Tech Air Balancing, we specialize in optimizing air quality, rigorously adhering to the
+                    highest industry standards such as ASHRAE, AABC, NEBB, and SMACNA. Our mission is to exceed
+                    expectations, ensuring that your air systems not only meet the strictest standards but surpass them.
                     <br>
-                    Our expertise lies in providing independent and professional air balancing services, covering a comprehensive range of systems in the Quebec/Ontario region. The reports we produce are not only concise but also precise, reflecting our commitment to technical quality.
+                    Our expertise lies in providing independent and professional air balancing services, covering a
+                    comprehensive range of systems in the Quebec/Ontario region. The reports we produce are not only
+                    concise but also precise, reflecting our commitment to technical quality.
                     ​<br>
-                    With a competent and experienced team, as well as cutting-edge equipment, we have built a diversified client portfolio, including prestigious institutions such as universities, hotels, and hospitals.
+                    With a competent and experienced team, as well as cutting-edge equipment, we have built a
+                    diversified client portfolio, including prestigious institutions such as universities, hotels, and
+                    hospitals.
                     <br>
-                    At Green Tech Air Balancing, our commitment to excellence extends beyond standards to ensure that your environment benefits from optimal air quality.
+                    At Green Tech Air Balancing, our commitment to excellence extends beyond standards to ensure that
+                    your environment benefits from optimal air quality.
                 </p>
-               
+
             </div>
             <div class="col-lg-5 pb-5" style="min-height: 400px;">
                 <div class="position-relative bg-dark-radial h-100 ms-5">
@@ -655,18 +672,25 @@
         <div class="row g-5">
             <div class="col-lg-6 pe-lg-5">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 display-4 text-uppercase text-white"><img src="./img/logo.png" alt="air_balancing"></h1>
+                    <h1 class="m-0 display-4 text-uppercase text-white"><img src="./img/logo.png" alt="air_balancing">
+                    </h1>
                 </a>
-                <p>We are an independent balancing company serving Quebec/Ontario area and provides the highest quality of services and provide reports with details for building owners, architects, mechanical engineers and contractors.</p>
+                <p>We are an independent balancing company serving Quebec/Ontario area and provides the highest quality
+                    of services and provide reports with details for building owners, architects, mechanical engineers
+                    and contractors.</p>
                 <p><i class="fa fa-map-marker-alt me-2"></i>Address: 203 Patriot Place Kanata ON Canada K2M 0B9
                 </p>
                 <p><i class="fa fa-phone-alt me-2"></i>613-263-7916</p>
                 <p><i class="fa fa-envelope me-2"></i>info@gtairbalancing.com</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="#"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="#"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-6 ps-lg-5">
@@ -675,18 +699,24 @@
                         <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-white-50 mb-2" href="#home"><i class="fa fa-angle-right me-2"></i>Home</a>
-                            <a class="text-white-50 mb-2" href="#aboutus"><i class="fa fa-angle-right me-2"></i>About Us</a>
-                            <a class="text-white-50 mb-2" href="#service"><i class="fa fa-angle-right me-2"></i>Our Services</a>
-                            <a class="text-white-50 mb-2" href="#contact"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
-                            <a class="text-white-50" href="#contact"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                            <a class="text-white-50 mb-2" href="#aboutus"><i class="fa fa-angle-right me-2"></i>About
+                                Us</a>
+                            <a class="text-white-50 mb-2" href="#service"><i class="fa fa-angle-right me-2"></i>Our
+                                Services</a>
+                            <a class="text-white-50 mb-2" href="#contact"><i class="fa fa-angle-right me-2"></i>Meet The
+                                Team</a>
+                            <a class="text-white-50" href="#contact"><i class="fa fa-angle-right me-2"></i>Contact
+                                Us</a>
                         </div>
                     </div>
-                    
+
                     <div class="col-sm-12">
                         <h4 class="text-white text-uppercase mb-4">Newsletter</h4>
                         <div class="w-100">
                             <div class="input-group">
-                                <input type="text" class="form-control border-light" style="padding: 20px 30px;" placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign Up</button>
+                                <input type="text" class="form-control border-light" style="padding: 20px 30px;"
+                                    placeholder="Your Email Address"><button class="btn btn-primary px-4">Sign
+                                    Up</button>
                             </div>
                         </div>
                     </div>
@@ -697,7 +727,8 @@
     <div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
         <div class="d-flex flex-column flex-md-row justify-content-between">
             <div class="py-4 px-5 text-center text-md-start">
-                <p class="mb-0">&copy; <a class="text-primary" href="#"> Green Tech Air Balancing</a>. All Rights Reserved.</p>
+                <p class="mb-0">&copy; <a class="text-primary" href="#"> Green Tech Air Balancing</a>. All Rights
+                    Reserved.</p>
             </div>
         </div>
     </div>
